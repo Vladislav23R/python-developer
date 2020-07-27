@@ -1,4 +1,4 @@
-time_user = int(input('Enter time in seconds: '))
+time_user = int(input('Enter time in seconds:  '))
 
 
 # 1 min = 60 sec

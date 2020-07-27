@@ -1,4 +1,4 @@
-a = int(input('Enter number: '))
+a = int(input('Enter number:  '))
 c = a * a
 print(a)
 print(float(c))

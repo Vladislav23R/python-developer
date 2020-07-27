@@ -1,5 +1,5 @@
-earnings = float(input('Enter you earnings: '))
-costs = float(input('Enter you costs: '))
+earnings = float(input('Enter you earnings:  '))
+costs = float(input('Enter you costs:  '))
 
 fin_result = earnings - costs
 

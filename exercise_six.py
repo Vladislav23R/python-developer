@@ -1,5 +1,5 @@
-a = float(input('Enter the result in kilometers for the first day: '))
-b = float(input('How many kilometers do you want to run: '))
+a = float(input('Enter the result in kilometers for the first day:  '))
+b = float(input('How many kilometers do you want to run:  '))
 
 day = 1
 

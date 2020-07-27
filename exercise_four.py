@@ -1,4 +1,4 @@
-user_number = int(input('Enter you number: '))
+user_number = int(input('Enter you number:  '))
 
 number = user_number
 num_max = number % 10 # последняя цифра
