@@ -1,7 +1,29 @@
-list = [12, 54.12, 'str', True, (12, 'Hello'), {'name': 'Lex', 'age': 25}, ['str', 12], {12, 44.23, 'set'}]
+# 1 вариант
+def div(a = int(input('Enret number: ')), b = int(input('Enret number: '))):
+    if a == 0 or b == 0:
+        return f'Делить на ноль нельзя!'
+    else:
+        result = a / b
+        return result
 
-for index, value in enumerate(list):
-    index += 1 # корректное отоброжение нумерации с 1, а не 0
-    print(index, type(value))
+print(div())
+
+
+
+# 2 вариант
+def div():
+    """ Деление двух чисел """
+    a = input('Enret number: ')
+    b = input('Enret number: ')
+    try:
+        result = int(a) / int(b)
+        return result
+    except ZeroDivisionError:
+        return f"На ноль делить нельзя!"
+    except ValueError:
+        return f'Только числа.'
+
+print(div())
+
 
 

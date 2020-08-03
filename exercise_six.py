@@ -1,40 +1,32 @@
-products = []
+def int_func(*args):
+    """ Функция пропускающая только латинские прописные буквы """
+    args = input('Введите слово латинскими буквами: ')
+    uni_list = [32, 44, 46, 33, 58, ]
+    for el in range(97, 123, 1): # список строчных латинских букв в unicode, а также пробел, '.', ','
+        uni_list.append(el)
 
-i = 1
-start = None
-while start != "Q":
-    start = input('Если хотите внести данные введите: Y\n'
-                  'Для завершения работы введите: Q\n'
-                  'Для аналитики введите: I').upper()
-    if start == "Y":
-        tuple = (
-            i, {'название': input("введите название товара: "),
-               'цена': input("введите цену товара: "),
-               'количество': input("введите количество товара: "),
-               'единицы': input("введите единицы измерения: ")}
-        )
-        products.append(tuple)
-        i += 1
-    elif start == "Q":
-        break
-    elif start =='I':
-        name = []
-        price = []
-        count = []
-        ed_iz = []
-        i = 0
-        analityc = dict(название=name, цена=price, количество=count, единицы=ed_iz)
-        while i != len(products):
-            name.append(products[i][1]['название'])
-            price.append(products[i][1]['цена'])
-            count.append(products[i][1]['количество'])
-            ed_iz.append(products[i][1]['единицы'])
-            i += 1
-        print(analityc)
-    else:
-        print("Вы ввели некорректное значение.")
-        continue
+    for el in args: # проверка вхождения введенных пользователем слов в латинский алфавит строчных букв
+        if ord(el) in uni_list:
+            continue
+        else:
+            return f'Ошибка.'
+    return args.title()
 
-print(products)
+print(int_func())
 
 
+
+def int_func(text):
+    text = text
+    uni_list = [32, 44, 46, 33, 58, ]
+    for el in range(97, 123, 1):
+        uni_list.append(el)  # для проверки вхождения в латинский алфавит
+
+    for el in text:
+        if ord(el) in uni_list:
+            continue
+        else:
+            return f'Ошибка'
+    return text.title()
+
+print(int_func(''))
